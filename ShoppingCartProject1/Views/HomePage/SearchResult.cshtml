@@ -1,0 +1,258 @@
+﻿
+@using ShoppingCartProject1.Models;
+@model IEnumerable<tblProduct>
+
+@{
+    ViewBag.Title = "SearchResult";
+    Layout = "~/Views/Shared/_LayoutHF.cshtml";
+}
+
+<script src="~/Template/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+    });
+</script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="page-head">
+        <div class="container">
+            <h3>@Model.First().Spec3</h3>
+        </div>
+    </div>
+    <!-- //banner -->
+    <!-- mens -->
+    <div class="men-wear">
+        <div class="container">
+            <div class="col-md-4 products-left" >
+                <div class="css-treeview">
+                    <h4>Categories</h4>
+                    <ul class="tree-list-pad">
+                        <li>
+                            <input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><span></span><b>Women's Collections</b></label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="item-0-0" /><label for="item-0-0"> Brands</label>
+                                    <ul>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Adidas</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">FILA</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Nike</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Puma</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Madden Girl</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">K- swiss</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="item-0-1" /><label for="item-0-1">Styles</label>
+                                    <ul>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="shoes"})">Shoes</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="sandal"})">Sandals</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="Wedge"})">Wedges</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="Heels"})">Heels</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" checked="checked" id="item-1" /><label for="item-1"><span></span><b>Mens's Collections</b></label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="item-1-0" /><label for="item-1-0"> Brands</label>
+                                    <ul>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Adidas</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">FILA</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Nike</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Puma</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Woodlands</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">wolverine</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="item-1-1" /><label for="item-1-1">Styles</label>
+                                    <ul>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="shoes"})">Shoes</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="Sandal"})">Sandals</a></li>
+                                        <li><a href="@Url.Action("SearchResult", "HomePage",new { searched="flipflop"})">flipflops</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" checked="checked" id="item-2" /><label for="item-2"><span>Kids's Collections</span></label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="item-2-0" /><label for="item-2-0"> Brands</label>
+                                    <ul>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">ASICS</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">FILA</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Nike</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Puma</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Woodlands</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Adidas</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="item-2-1" /><label for="item-2-1">Styles</label>
+                                    <ul>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Shoes</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Sandals</a></li>
+                                        <li><a href="">Lugs</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="item-3" checked="checked" /><label for="item-3"><b>Best Collections</b></label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" checked="checked" id="item-3-0" /><label for="item-3-0"><b>New Arrivals</b></label>
+                                    <ul>
+
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="Wedge"})">Wedges</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="shoes"})">Shoes</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="sandal"})">Sandals</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="branded"})">Branded</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            <input type="checkbox" checked="checked" id="item-4" /><label for="item-4"><b>Best Offers</b></label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="item-4-0" /><label for="item-4-0">Summer Discount Sales</label>
+                                    <ul>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="women"})">Womens' footwears</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="men"})">Men's Footwears</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="kid"})">Kids Footwers</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <input type="checkbox" id="item-4-1" /><label for="item-4-1">Flat Discounts</label>
+                                    <ul>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="wedge"})">Wedges</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="shoes"})">Excecutive shoes</a></li>
+                                        <li><a href="@Url.Action("SearchResult","HomePage",new { searched="sandal"})">Sandals</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-md-8 products-right">
+
+    <div class="sort-grid">
+        <div class="sorting">
+            <h6>Sort By</h6>
+            <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
+                <option value="null">Sort by</option>
+                <option value="null">Rating</option>
+                <option value="null">Price(High - Low)</option>
+                <option value="null">Price(Low - High)</option>
+                <option value="null">New and Best Selling</option>
+            </select>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+
+
+    @foreach (var item in Model)
+                {
+        <div class="col-md-4 product-men">
+            <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item">
+                    <img src="~/Image/@item.Image1" alt="" class="pro-image-front">
+                    <img src="~/Image/@item.Image2" alt="" class="pro-image-back">
+                    <div class="men-cart-pro">
+                        <div class="inner-men-cart-pro">
+                            @Html.ActionLink("QuickView", "Single", "HomePage", new { id = @item.PId }, new { @class = "link-product-add-cart" })
+                        </div>
+                    </div>
+                    <span class="product-new-top">New</span>
+
+                </div>
+                <div class="item-info-product ">
+                    <h4><a href="single.html">@item.Pname</a></h4>
+                    <div class="info-product-price">
+                        <span class="item_price">$@item.Quantity</span>
+                        <del>$@item.Price</del>
+                    </div>
+                    <a href="#" onclick="inr()" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                </div>
+            </div>
+       
+
+        </div>
+        
+    }
+
+                <div class="clearfix"></div>
+            </div>
+
+                    <div class="men-wear-bottom">
+                        <div class="col-sm-12 men-wear-left tooltip-arrow ">
+                            <img class="img-responsive" src="~/Image/@Model.First().Image1" alt=" " />
+                        </div>
+                        <div class="col-sm-8 men-wear-right">
+                            <span>
+                                <h4><thin>Exclusive Footwear Collections</thin></h4>
+                                <p>
+                                    @Model.First().About
+                                </p>
+                            </span>
+</div>
+                        <div class="clearfix"></div>
+                    </div>
+               
+                          
+            
+                                        <div class="pagination-grid text-right">
+                                            <ul class="pagination paging">
+                                                <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                                <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //mens -->
+                                <!-- //product-nav -->
+                                }
+
+
+                                @section Scripts {
+                                    @Scripts.Render("~/bundles/jqueryval")
+                                }
+

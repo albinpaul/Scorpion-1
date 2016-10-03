@@ -1,0 +1,177 @@
+﻿@model ShoppingCartProject1.DAL.tblProduct
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_LayoutHF.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+<h2>View</h2>
+
+<div>
+    <h4>tblProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Meta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Meta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.About)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.About)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Onstock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Onstock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comfort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comfort)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Review)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Review)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Spec1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Spec1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Spec2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Spec2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Spec3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Spec3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image5)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

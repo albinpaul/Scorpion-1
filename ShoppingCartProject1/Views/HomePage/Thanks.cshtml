@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Thanks";
+    Layout = "~/Views/Shared/_LayoutHF.cshtml";
+}
+
+
+
+    <header style="margin-top:30px;">
+        <div class="aa-header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="aa-header-bottom-area">
+                            <!-- logo  -->
+                            <div class="aa-logo">
+                                <!-- Text based logo -->
+
+                                <span class="fa fa-shopping-cart"></span>
+                                <h1 style="color:orange;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                                    <strong>Thank you for your order</strong></h1></br>
+                                    <p><span><strong>order number is :30852033</strong></span></p>
+                                    <p><span>you will receive an email confirmation shortly</span></p>
+                                    <a href=""><strong>print reciept</strong></a>
+
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <section id="checkout">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="checkout-area">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="checkout-left">
+                                        <div class="panel-group">
+
+                                            <!-- Login section -->
+                                            <div class="panel panel-default aa-checkout-login">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" href="#collapseTwo">
+                                                            save your information for next time.
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseTwo">
+                                                    <div class="panel-body">
+                                                        <input type="text" placeholder="Username or email">
+                                                        <input type="password" placeholder="Password">
+                                                        <button type="submit" class="aa-browse-btn">create account</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+}
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="~/Template/js/jquery.smartmenus.js"></script>
+    <!-- SmartMenus jQuery Bootstrap Addon -->
+    <script type="text/javascript" src="~/Template/js/jquery.smartmenus.bootstrap.js"></script>
+    <!-- Product view slider -->
+    <script type="text/javascript" src="~Template/js/jquery.simpleGallery.js"></script>
+    <script type="text/javascript" src="~/Template/js/jquery.simpleLens.js"></script>
+    <!-- slick slider -->
+    <script type="text/javascript" src="~/Template/js/slick.js"></script>
+    <!-- Price picker slider -->
+    <script type="text/javascript" src="~/Template/js/nouislider.js"></script>
+
+    <!-- Custom js -->
+    <script src="js/custom.js"></script>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

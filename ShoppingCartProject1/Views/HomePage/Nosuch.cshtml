@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Nosuch";
+    Layout = "~/Views/Shared/_LayoutHF.cshtml";
+}
+<section id="error-page">
+    <div class="error-page-inner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <div class="bg-404">
+                            @*<div class="error-image">
+                                <img class="img-responsive" src="~/Images/" alt="">
+                            </div*@
+                        </div>
+                        <h2>Not in stock </h2>
+                        <p>Check Something else like "branded","Shoes" , "Heels" ,"Wedge" ,etc </p><div class="clearfix"></div>
+                        <a href="@Url.Action("LandingPage1","HomePage")" class="btn btn-block">RETURN TO THE HOMEPAGE</a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

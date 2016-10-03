@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_LayoutHF.cshtml";
+}
+<script type="text/javascript" src="~/Template/js/pignose.layerslider.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function () {
+        $('#visual').pignoseLayerSlider({
+            play: '.btn-play',
+            pause: '.btn-pause',
+            next: '.btn-next',
+            prev: '.btn-prev'
+        });
+    });
+    //]]>
+</script>
+<div class="banner-grid">
+    <div id="visual">
+        <div class="slide-visual">
+            <!-- Slide Image Area (1000 x 424) -->
+            <ul class="slide-group">
+                <li><img class="img-responsive" src="~/Template/images/ba1.jpg" alt="Dummy Image" /></li>
+                <li><img class="img-responsive" src="~/Template/images/ba2.jpg" alt="Dummy Image" /></li>
+                <li><img class="img-responsive" src="~/Template/images/ba3.jpg" alt="Dummy Image" /></li>
+            </ul>
+
+            <!-- Slide Description Image Area (316 x 328) -->
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div  style="display:table-row;padding-left:200px; ">
+        <div  style="display:table-cell" class="col-lg-4 col-sm-12 col-md-4  col-xs-12">
+            <img src="~/Template/images/land1.jpg" class="img-responsive" style="margin-left:20px;margin-bottom:20px;margin-top:20px;margin-right:20px;" />
+            <h3 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">NEW ARRIVALS</h3>
+            <p>Never Miss the new arrivals because You'll never get a chance to grab it back!!! Checkout our new arrivals every sundays.</p>
+        </div> 
+        <div style="display:table-cell" class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
+            <img src="~/Template/images/land2.jpg" class="img-responsive" style="margin-left:20px;margin-bottom:20px;margin-top:20px;margin-right:20px;"/>
+            <h3 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">OFFERS</h3>
+            <p>We have a splendid collection of Offers comming up . check out our latest offersection in this site !!</p>
+        </div>
+        <div style="display:table-cell" class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
+            <img src="~/Template/images/land3.jpg" class="img-responsive" style="margin-left:20px;margin-bottom:20px;margin-top:20px;margin-right:20px;"/>
+            <h3 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">TRENDING</h3>
+            <p>We do not set back the trend . check out the most recent trends and grab them before it goes to somonelse!!! </p>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
